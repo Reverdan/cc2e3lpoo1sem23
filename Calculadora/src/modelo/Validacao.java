@@ -18,7 +18,7 @@ public class Validacao
             this.num2 = Double.valueOf(this.numero2);
             if (this.num2.equals(0.0) && 
                     this.operacao.equals("/"))
-                this.mensagem = "Divisão por zero";
+                this.mensagem = "Divisão por 0";
         } 
         catch (Exception e)
         {
