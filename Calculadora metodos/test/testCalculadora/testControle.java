@@ -38,15 +38,7 @@ public class testControle
     public void testar()
     {
         modelo.Controle controle = new modelo.Controle();
-        controle.numero1 = "5";
-        controle.numero2 = "3";
-        controle.operacao = "+";
-        controle.executar();
-        assertEquals("8.0", controle.resultado);
-        controle.numero1 = "10";
-        controle.numero2 = "0";
-        controle.operacao = "/";
-        controle.executar();
-        assertEquals("Divisão por zero", controle.resultado);
+        assertEquals("8.0", controle.executar("5", "3", "+"));
+        assertEquals("Divisão por zero", controle.executar("10", "0", "/"));
     }
 }
