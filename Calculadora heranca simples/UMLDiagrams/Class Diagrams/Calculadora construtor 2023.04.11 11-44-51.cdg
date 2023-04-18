@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Calculadora construtor">
+  <ClassDiagramComponents>
+    <Class name="frmPrincipal" package="apresentacao" visibility="public" xPosition="80.0" yPosition="646.0">
+      <Fields>
+        <Field name="btnDividir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnMultiplicar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSomar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubtrair" type="javax.swing.JButton" visibility="private"/>
+        <Field name="lblPrimeiroNumero" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblResultado" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblSegundoNumero" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txfPrimeiroNumero" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txfSegundoNumero" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="java.awt.Frame" name="parent"/>
+          <Argument type="boolean" name="modal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="calcular" returnType="void" visibility="private">
+          <Argument type="String" name="operacao"/>
+        </Method>
+        <Method name="btnSomarActionPerformed" returnType="//GEN-FIRST:event_btnSomarActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubtrairActionPerformed" returnType="//GEN-FIRST:event_btnSubtrairActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnMultiplicarActionPerformed" returnType="//GEN-FIRST:event_btnMultiplicarActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDividirActionPerformed" returnType="//GEN-FIRST:event_btnDividirActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Calculadora" package="calculadora" visibility="public" xPosition="80.0" yPosition="1088.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Calculos" package="modelo" visibility="public" xPosition="80.0" yPosition="70.0">
+      <Fields>
+        <Field name="num1" type="Double" visibility="private"/>
+        <Field name="num2" type="Double" visibility="private"/>
+        <Field name="operacao" type="String" visibility="private"/>
+        <Field name="resultado" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Double" name="num1"/>
+          <Argument type="Double" name="num2"/>
+          <Argument type="String" name="operacao"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="private"/>
+        <Method name="getResultado" returnType="Double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Controle" package="modelo" visibility="public" xPosition="80.0" yPosition="399.0">
+      <Fields>
+        <Field name="numero1" type="String" visibility="private"/>
+        <Field name="numero2" type="String" visibility="private"/>
+        <Field name="operacao" type="String" visibility="private"/>
+        <Field name="resultado" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numero1"/>
+          <Argument type="String" name="numero2"/>
+          <Argument type="String" name="operacao"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="private"/>
+        <Method name="getResultado" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Validacao" package="modelo" visibility="public" xPosition="492.0" yPosition="70.0">
+      <Fields>
+        <Field name="numero1" type="String" visibility="private"/>
+        <Field name="numero2" type="String" visibility="private"/>
+        <Field name="operacao" type="String" visibility="private"/>
+        <Field name="num1" type="Double" visibility="private"/>
+        <Field name="num2" type="Double" visibility="private"/>
+        <Field name="mensagem" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numero1"/>
+          <Argument type="String" name="numero2"/>
+          <Argument type="String" name="operacao"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="private"/>
+        <Method name="getNum1" returnType="Double" visibility="public"/>
+        <Method name="getNum2" returnType="Double" visibility="public"/>
+        <Method name="getMensagem" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="modelo.Controle" target="modelo.Validacao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="calculadora.Calculadora" target="apresentacao.frmPrincipal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="apresentacao.frmPrincipal" target="modelo.Controle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="modelo.Controle" target="modelo.Calculos" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
