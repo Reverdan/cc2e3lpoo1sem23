@@ -1,28 +1,14 @@
 package modelo;
 
-public class CalculoFatorial extends absPropriedades
+public class CalculoFatorial
 {
-
-    public CalculoFatorial(Integer num)
+    public void executar(Integer num)
     {
-        super(num);
-    }
-
-    @Override
-    public void executar()
-    {
-        int base = this.num;
+        int base = num;
         for (int i = 1; i < base; i++)
         {
             num *= i;
         }
+        Estaticos.resposta = num.toString();
     }
-
-    @Override
-    public String toString()
-    {
-        return num.toString(); 
-    }
-    
-    
 }

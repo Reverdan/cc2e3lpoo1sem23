@@ -1,29 +1,25 @@
 package modelo;
 
-public class Controle extends absPropriedades
+public class Controle implements Runnable
 {
 
-    public Controle(String numero)
-    {
-        super(numero);
-    }
-
-    @Override
     public void executar()
     {
-        absPropriedades validacao = new Validacao(numero);
-        if (Estaticos.mensagem.equals(""))
+        Validacao validacao = new Validacao();
+        CalculoFatorial fatorial = new CalculoFatorial();
+        while (true)
         {
-            absPropriedades fatorial = new CalculoFatorial(validacao.num);
-            this.numero = fatorial.toString();
+            validacao.executar();
+            if (Estaticos.mensagem.equals(""))
+            {
+                fatorial.executar(Estaticos.num);
+            }
         }
     }
 
     @Override
-    public String toString()
+    public void run()
     {
-        return this.numero; 
+        executar();
     }
-    
-    
 }

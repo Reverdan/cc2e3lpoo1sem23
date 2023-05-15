@@ -4,8 +4,9 @@
  */
 package apresentacao;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import modelo.Controle;
 import modelo.Estaticos;
 
 /**
@@ -83,9 +84,18 @@ public class frmPrincipal extends javax.swing.JDialog
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnCalcularActionPerformed
     {//GEN-HEADEREND:event_btnCalcularActionPerformed
-        Controle controle = new Controle(txfNumero.getText());
+        Estaticos.numero = txfNumero.getText();
+        try
+        {
+            Thread.sleep(100);
+        }
+        catch (InterruptedException ex)
+        {
+            Logger.getLogger(frmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
         if (Estaticos.mensagem.equals(""))
-            lblResposta.setText(controle.toString());
+            lblResposta.setText(Estaticos.resposta);
         else
         {
             lblResposta.setText("");

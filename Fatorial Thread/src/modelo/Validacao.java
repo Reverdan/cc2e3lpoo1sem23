@@ -1,25 +1,19 @@
 package modelo;
 
-public class Validacao extends absPropriedades
+public class Validacao
 {
 
-    public Validacao(String numero)
-    {
-        super(numero);
-    }
-
-    @Override
     public void executar()
     {
-        Estaticos.mensagem = "";
         try
         {
-            this.num = Integer.valueOf(numero);
-        } 
-        catch (Exception e)
+            Estaticos.num = Integer.valueOf(Estaticos.numero);
+            Estaticos.mensagem = "";
+        }
+        catch (NumberFormatException e)
         {
             Estaticos.mensagem = "Erro de conversão";
         }
     }
-    
+
 }
