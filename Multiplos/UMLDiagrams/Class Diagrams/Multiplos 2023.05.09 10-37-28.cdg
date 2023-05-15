@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multiplos">
+  <ClassDiagramComponents>
+    <Class name="frmFatorial" package="apresentacao" visibility="public" xPosition="61.0" yPosition="787.0">
+      <Fields>
+        <Field name="btnCalcular" type="javax.swing.JButton" visibility="private"/>
+        <Field name="lblResposta" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txfNumero" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="java.awt.Frame" name="parent"/>
+          <Argument type="boolean" name="modal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnCalcularActionPerformed" returnType="//GEN-FIRST:event_btnCalcularActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="frmPrincipal" package="apresentacao" visibility="public" xPosition="61.0" yPosition="1359.0">
+      <Fields>
+        <Field name="mnbAplicacoes" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="mniFatorial" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="mniTriangulos" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="mnuAplicacoes" type="javax.swing.JMenu" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="java.awt.Frame" name="parent"/>
+          <Argument type="boolean" name="modal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="mniFatorialActionPerformed" returnType="//GEN-FIRST:event_mniFatorialActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mniTriangulosActionPerformed" returnType="//GEN-FIRST:event_mniTriangulosActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="frmTriangulos" package="apresentacao" visibility="public" xPosition="576.0" yPosition="1019.0">
+      <Fields>
+        <Field name="btnVerificar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="lblLado1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblLado2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblLado3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblResposta" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txfLado1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txfLado2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txfLado3" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="java.awt.Frame" name="parent"/>
+          <Argument type="boolean" name="modal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnVerificarActionPerformed" returnType="//GEN-FIRST:event_btnVerificarActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="absPropriedades" package="modelo" visibility="public" isAbstract="true" xPosition="528.0" yPosition="78.0">
+      <Fields>
+        <Field name="numero" type="String" visibility="protected"/>
+        <Field name="num" type="Integer" visibility="protected"/>
+        <Field name="lado1" type="String" visibility="protected"/>
+        <Field name="lado2" type="String" visibility="protected"/>
+        <Field name="lado3" type="String" visibility="protected"/>
+        <Field name="l1" type="Double" visibility="protected"/>
+        <Field name="l2" type="Double" visibility="protected"/>
+        <Field name="l3" type="Double" visibility="protected"/>
+        <Field name="resposta" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numero"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="num"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="lado1"/>
+          <Argument type="String" name="lado2"/>
+          <Argument type="String" name="lado3"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Double" name="l1"/>
+          <Argument type="Double" name="l2"/>
+          <Argument type="Double" name="l3"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CalculoFatorial" package="modelo" visibility="public" isFinal="true" xPosition="61.0" yPosition="239.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="num"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ControleFatorial" package="modelo" visibility="public" isFinal="true" xPosition="525.0" yPosition="618.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ControleTriangulos" package="modelo" visibility="public" xPosition="890.0" yPosition="618.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="lado1"/>
+          <Argument type="String" name="lado2"/>
+          <Argument type="String" name="lado3"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Estaticos" package="modelo" visibility="public" xPosition="1083.0" yPosition="87.0">
+      <Fields>
+        <Field name="mensagem" type="String" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Triangulos" package="modelo" visibility="public" xPosition="61.0" yPosition="78.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Double" name="l1"/>
+          <Argument type="Double" name="l2"/>
+          <Argument type="Double" name="l3"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ValidacaoFatorial" package="modelo" visibility="public" isFinal="true" xPosition="242.0" yPosition="618.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ValidacaoTriangulo" package="modelo" visibility="public" xPosition="61.0" yPosition="402.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="lado1"/>
+          <Argument type="String" name="lado2"/>
+          <Argument type="String" name="lado3"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Multiplos" package="multiplos" visibility="public" xPosition="966.0" yPosition="1511.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="intMetodos" package="modelo" visibility="public" xPosition="1090.0" yPosition="269.0">
+      <Methods>
+        <Method name="executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="apresentacao.frmPrincipal" target="apresentacao.frmFatorial" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="modelo.ControleTriangulos" target="modelo.absPropriedades" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="apresentacao.frmTriangulos" target="modelo.ControleTriangulos" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="modelo.ValidacaoTriangulo" target="modelo.absPropriedades"/>
+    <UseRelation name="" source="modelo.ControleFatorial" target="modelo.absPropriedades" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="apresentacao.frmFatorial" target="modelo.ControleFatorial" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="modelo.ControleFatorial" target="modelo.absPropriedades"/>
+    <IsRelation name="is" source="modelo.ValidacaoFatorial" target="modelo.absPropriedades"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="modelo.absPropriedades" target="modelo.intMetodos"/>
+    <UseRelation name="" source="apresentacao.frmPrincipal" target="apresentacao.frmTriangulos" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="modelo.CalculoFatorial" target="modelo.absPropriedades"/>
+    <UseRelation name="" source="multiplos.Multiplos" target="apresentacao.frmPrincipal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="modelo.Triangulos" target="modelo.absPropriedades"/>
+    <IsRelation name="is" source="modelo.ControleTriangulos" target="modelo.absPropriedades"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
