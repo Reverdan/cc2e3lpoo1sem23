@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="MIlhas">
+  <ClassDiagramComponents>
+    <Class name="frmPrincipal" package="apresentacao" visibility="public" xPosition="124.0" yPosition="730.0">
+      <Fields>
+        <Field name="btnConverter" type="javax.swing.JButton" visibility="private"/>
+        <Field name="lblMilhas" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblResposta" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txfMilhas" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="java.awt.Frame" name="parent"/>
+          <Argument type="boolean" name="modal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnConverterActionPerformed" returnType="//GEN-FIRST:event_btnConverterActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Milhas" package="milhas" visibility="public" xPosition="364.0" yPosition="1039.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="absPropriedades" package="modelo" visibility="public" isAbstract="true" xPosition="124.0" yPosition="271.0">
+      <Fields>
+        <Field name="numero" type="String" visibility="protected"/>
+        <Field name="num" type="Double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numero"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Double" name="num"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Controle" package="modelo" visibility="public" xPosition="271.0" yPosition="549.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Conversao" package="modelo" visibility="public" xPosition="626.0" yPosition="394.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Double" name="num"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Estaticos" package="modelo" visibility="public" xPosition="631.0" yPosition="98.0">
+      <Fields>
+        <Field name="mensagem" type="String" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Validacao" package="modelo" visibility="public" xPosition="622.0" yPosition="238.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="intMetodos" package="modelo" visibility="public" xPosition="124.0" yPosition="98.0">
+      <Methods>
+        <Method name="executar" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="milhas.Milhas" target="apresentacao.frmPrincipal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="apresentacao.frmPrincipal" target="modelo.Controle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="modelo.Controle" target="modelo.absPropriedades"/>
+    <UseRelation name="" source="modelo.Controle" target="modelo.absPropriedades" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="modelo.Conversao" target="modelo.absPropriedades"/>
+    <IsRelation name="is" source="modelo.Validacao" target="modelo.absPropriedades"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="modelo.absPropriedades" target="modelo.intMetodos"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
